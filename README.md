@@ -1,5 +1,7 @@
 # HA AI Usage Card
 
+![Preview](docs/preview.png)
+
 A responsive Home Assistant Lovelace card that combines usage limits from
 multiple AI accounts in one dashboard surface.
 
@@ -40,3 +42,6 @@ accounts:
 
 Only the `accounts` list is required. Missing optional sensors are displayed as
 unavailable without breaking the card.
+
+The Home Assistant visual card editor includes entity pickers and controls for
+adding or removing accounts; YAML remains available for advanced setups.
