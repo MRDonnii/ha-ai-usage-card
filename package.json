@@ -1,0 +1,6 @@
+{
+  "name": "ha-ai-usage-card",
+  "version": "0.1.0",
+  "description": "Home Assistant card for combined AI usage limits",
+  "license": "MIT"
+}
