@@ -1,4 +1,5 @@
-const VERSION = "0.1.1";
+import "./ha-card-list-editor.js";
+const VERSION = "0.2.0";
 
 class HAAIUsageCard extends HTMLElement {
   constructor() {
@@ -11,6 +12,11 @@ class HAAIUsageCard extends HTMLElement {
 
   static getStubConfig() {
     return { title: "AI-forbrug", accounts: [] };
+  }
+  static getConfigElement() {
+    const editor = document.createElement("ha-card-list-editor");
+    editor.definition = { roots: [{ key: "title", label: "Titel" }, { key: "subtitle", label: "Undertitel" }, { key: "animation", label: "Animation", type: "boolean" }], collections: [{ key: "accounts", label: "AI-konti", itemLabel: "konto", defaults: { name: "Ny konto" }, fields: [{ key: "name", label: "Navn" }, { key: "provider", label: "Udbyder" }, { key: "icon", label: "Ikon" }, { key: "connected", label: "Forbundet", type: "entity" }, { key: "limit_reached", label: "Grænse nået", type: "entity" }, { key: "plan", label: "Plan", type: "entity" }, { key: "session_remaining", label: "5 timer tilbage", type: "entity" }, { key: "session_reset", label: "5 timer nulstilling", type: "entity" }, { key: "weekly_remaining", label: "Uge tilbage", type: "entity" }, { key: "weekly_reset", label: "Uge nulstilling", type: "entity" }, { key: "last_update", label: "Senest opdateret", type: "entity" }, { key: "credits", label: "Credits", type: "entity" }, { key: "extra_spent", label: "Ekstraforbrug", type: "entity" }, { key: "refresh", label: "Opdatér-knap", type: "entity" }] }] };
+    return editor;
   }
 
   setConfig(config) {
