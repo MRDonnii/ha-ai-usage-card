@@ -2,6 +2,9 @@
 
 ![Preview](docs/preview.png)
 
+> HACS installs both JavaScript files automatically. For a manual installation,
+> copy `ha-ai-usage-card.js` and `ha-card-list-editor.js` into the same folder.
+
 A responsive Home Assistant Lovelace card that combines usage limits from
 multiple AI accounts in one dashboard surface.
 
